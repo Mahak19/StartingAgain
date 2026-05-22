@@ -4,11 +4,14 @@
 
 const box = document.querySelectorAll(".box");
 
-const randoms = () => {
-    return`rgb(${Math.floor(Math.random() * 256)}, 
-    ${Math.floor(Math.random() * 256)}, 
-    ${Math.floor(Math.random() * 256)} )`;
-};
+// const randoms = () => {
+//     return`rgb(${Math.floor(Math.random() * 256)}, 
+//     ${Math.floor(Math.random() * 256)}, 
+//     ${Math.floor(Math.random() * 256)} )`;
+// };
+
+const randm = Math.floor(Math.random() * 256);
+return `rgb(${randm()}, ${randm()}, ${randm()})`;
 
 box.forEach(element => {
 element.style.backgroundColor = randoms();
