@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            background-color: chartreuse;
+            height: 90vh;
+        }
+
+        .ball {
+            background-color: sandybrown;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            border: 2px solid black;
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            /* animation: ballY 1s ease-out infinite alternate, ballX 17s linear infinite;; */
+            /* animation: ballX 2s linear infinite; */
+        }
+
+        @keyframes ballX {
+            from {
+                left: 0%;
+            }
+
+            to {
+                left: 90%;
+            }
+        }
+
+        @keyframes ballY {
+            from {
+                bottom: 10%;
+            }
+
+            to {
+                bottom: 85%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
