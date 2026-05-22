@@ -10,11 +10,11 @@ const box = document.querySelectorAll(".box");
 //     ${Math.floor(Math.random() * 256)} )`;
 // };
 
-const randm = Math.floor(Math.random() * 256);
-return `rgb(${randm()}, ${randm()}, ${randm()})`;
+const randm = () => Math.floor(Math.random() * 256);
+const randmColor = () => `rgb(${randm()}, ${randm()}, ${randm()})`;
 
 box.forEach(element => {
-element.style.backgroundColor = randoms();
-element.style.borderColor = randoms();
+element.style.backgroundColor = randmColor();
+element.style.borderColor = randmColor();
 // element.style.color = randoms();
 });
