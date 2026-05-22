@@ -13,5 +13,5 @@ const randoms = () => {
 box.forEach(element => {
 element.style.backgroundColor = randoms();
 element.style.borderColor = randoms();
-element.style.color = randoms();
+// element.style.color = randoms();
 });
