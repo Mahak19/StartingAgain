@@ -1,69 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YouTube Playlist UI</title>
+
     <style>
-        .container{
-            display: flex;
-            /* gap: 20px; */
-            background-color: rgb(240, 240, 240);
-            padding: 10px;
-        }
-        img{
-            height: 80px;
-            width: 140px;
-            border-radius: 5px;
-        }
-        .lower{
-            display:flex;
-            gap : 20px;
-            opacity: 0.5;
-            font-size: 14px;
-        }
-        .name{
-            margin-top: 4px;
-            font-size: 18px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: bold;
-        }
-        .lower p{
-            margin-top: 0px;
-        }
-        .time{
-            font-size: 12px;
-            font-weight: bold;
-            background-color: rgb(68, 68, 68);
-            color: white;
-            border: 1px solid black;
-            border-radius: 4px;
-            padding: 1px;
-            position: relative;
-            right: 40px;
-            bottom: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
         }
 
-        
+        /* Main container */
+        .video-card {
+            display: flex;
+            gap: 12px;
+            width: 520px;
+            padding: 10px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Thumbnail section */
+        .thumbnail {
+            position: relative;
+        }
+
+        .thumbnail img {
+            width: 168px;
+            height: 94px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Time badge */
+        .video-duration {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 12px;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        /* Video info */
+        .video-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.3;
+            color: #000;
+        }
+
+        /* Meta info (channel, views, date) */
+        .video-meta {
+            display: flex;
+            gap: 6px;
+            font-size: 13px;
+            color: #606060;
+            margin-top: 6px;
+        }
+
+        .video-meta p {
+            margin: 0;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="right">
-            <img src="RK.jpg" alt="logo">
-            <span class="time">31:19</span>
+
+    <div class="video-card">
+
+        <!-- Thumbnail -->
+        <div class="thumbnail">
+            <img src="RK.jpg" alt="thumbnail">
+            <span class="video-duration">31:19</span>
         </div>
-        <div class="left">
-            <p class="name">Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1</p>
-            <div class="lower">
-                <p class="cName">CWH</p>
-                <p class="views">1.2M views</p>
-                <p class="date">1 year ago</p>
+
+        <!-- Video Info -->
+        <div class="video-info">
+            <p class="video-title">
+                Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1
+            </p>
+
+            <div class="video-meta">
+                <p class="channel-name">CodeWithHarry</p>
+                <p class="views">• 1.2M views</p>
+                <p class="upload-time">• 1 year ago</p>
             </div>
         </div>
-    </div>
-</body>
 
-</html>
+    </div>
+    <script src="hw9WebpagePlaylist.js"></script>
+
+</body>
+</html> 
